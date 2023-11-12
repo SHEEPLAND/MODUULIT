@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+<h1>Tehtävä 9</h1>
+<h2>Prime Number</h2>
+<p id="result"></p>
+
+<script>
+    "use strict";
+    const resultElement = document.querySelector("#result");
+
+    const number = parseInt(prompt("Enter an integer:"));
+
+    let isPrime = true;
+
+    if (number <= 1) {
+        isPrime = false;
+    } else {
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+
+    if (isPrime) {
+        resultElement.innerHTML = `${number} is a prime number.`;
+    } else {
+        resultElement.innerHTML = `${number} is not a prime number.`;
+    }
+</script>
+
+</body>
+</html>

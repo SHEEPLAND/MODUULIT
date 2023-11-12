@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function rollDice() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    const diceResults = [];
+
+    while (true) {
+        const result = rollDice();
+        diceResults.push(result);
+
+
+        document.write(`<p>Dice Roll: ${result}</p>`);
+
+        if (result === 6) {
+            break;
+        }
+    }
+
+    document.write("<h2>Dice Roll Results</h2>");
+    document.write("<ul>");
+
+    for (const result of diceResults) {
+        document.write(`<li>${result}</li>`);
+    }
+
+    document.write("</ul>");
+</script>
+
+</body>
+</html>

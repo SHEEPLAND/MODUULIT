@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 6</h1>
+<h2>Square Root</h2>
+
+<script>
+
+    let answer = confirm("Should I calculate the square root?");
+
+    if (answer) {
+        let number = prompt("Type the number here: ");
+        let squareRoot = Math.sqrt(Number(number));
+
+        if (Number.isNaN(squareRoot) || squareRoot < 0) {
+            document.body.innerHTML = "<h2>The square root of a negative number is not defined.</h2>";
+        } else {
+            document.body.innerHTML = "<h2>Square root: " + squareRoot + "</h2>";
+        }
+    } else {
+        document.body.innerHTML = "<h2>The square root is not calculated.</h2>";
+    }
+
+</script>
+</body>
+</html>

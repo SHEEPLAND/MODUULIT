@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const numbers = [];
+
+
+    let input = parseFloat(prompt("Enter a number (enter 0 to stop):"));
+
+    while (input !== 0 && !isNaN(input)) {
+      numbers.push(input);
+      input = parseFloat(prompt("Enter another number (enter 0 to stop):"));
+    }
+
+
+    numbers.sort((a, b) => b - a);
+
+
+    console.log("Numbers in descending order:");
+
+    for (const number of numbers) {
+      console.log(number);
+    }
+</script>
+</body>
+</html>

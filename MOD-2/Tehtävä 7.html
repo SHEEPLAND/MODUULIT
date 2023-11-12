@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function rollDice(sides) {
+        return Math.floor(Math.random() * sides) + 1;
+    }
+
+    const maxNumberString = prompt("Enter the maximum number on the dice:");
+    const maxNumber = parseInt(maxNumberString);
+
+    if (isNaN(maxNumber) || maxNumber <= 1) {
+        alert("Please enter a valid number greater than 1.");
+    } else {
+
+        const diceResults = [];
+
+        while (true) {
+            const result = rollDice(maxNumber);
+            diceResults.push(result);
+
+            alert(`Dice Roll: ${result}`);
+
+            if (result === maxNumber) {
+                break;
+            }
+        }
+
+        let resultsMessage = "Dice Roll Results:\n";
+        for (const result of diceResults) {
+            resultsMessage += `${result}\n`;
+        }
+        alert(resultsMessage);
+    }
+</script>
+</body>
+</html>

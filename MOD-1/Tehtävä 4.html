@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Tehtävä 4</h1>
+<body>
+<script>
+    let name = prompt("Enter your name: ");
+    let houses = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
+
+    //Randomly choosing a house
+    let randomHouse = Math.floor(Math.random() * houses.length);
+    let sortedHouse = houses[randomHouse];
+
+    alert(name + " you are " + sortedHouse + "!");
+</script>
+</body>
+
+
+</html>

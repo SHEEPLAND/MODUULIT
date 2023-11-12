@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Checker</title>
+</head>
+<body>
+
+<script>
+    const enteredNumbers = [];
+
+    while (true) {
+        const userInput = prompt("Enter a number (or press Cancel to stop):");
+
+        if (userInput === null) {
+            break;
+        }
+
+        const number = parseFloat(userInput);
+
+        if (isNaN(number)) {
+            alert("Please enter a valid number.");
+        } else if (enteredNumbers.includes(number)) {
+            alert("This number has already been given. Stopping program.");
+            break;
+        } else {
+            enteredNumbers.push(number);
+        }
+    }
+
+    enteredNumbers.sort((a, b) => a - b);
+
+    console.log("Entered numbers in ascending order:");
+    for (const num of enteredNumbers) {
+        console.log(num);
+    }
+</script>
+
+</body>
+</html>

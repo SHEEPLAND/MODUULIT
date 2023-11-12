@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 5</h1>
+<h2>Leap Years</h2>
+<script>
+    "use strict";
+
+    let year = prompt("Enter a year: ");
+
+    if (year % 4 === 0 && (year % 100 !== 0 || year % 400=== 0)){
+        document.body.innerHTML = "<h2>" + year + "is a leap year! </h2>"
+    }
+    else {
+        document.body.innerHTML = "<h2>" + year + " is  not a leap year! ;( </h2>"
+    }
+
+</script>
+</body>
+</html>

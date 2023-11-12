@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 7</h1>
+<h2>Rolling Dices</h2>
+<script>
+    let diceNumber = prompt("How many dice would you like to roll?");
+    diceNumber = parseInt(diceNumber);
+
+    let sum = 0;
+
+    while (diceNumber > 0) {
+        const result = Math.floor(Math.random() * 6) + 1;
+        sum += result;
+        console.log("Rolled: " + result);
+        diceNumber--;
+    }
+
+    console.log("Sum of the results: " + sum);
+    document.body.innerHTML = "<h2>Sum of the results: " + sum + "</h2>";
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Probability Calculator</title>
+</head>
+<body>
+<h1>Tehtävä 10</h1>
+<h2>Probality</h2>
+
+<p id="result"></p>
+
+<script>
+
+    let diceNumber = parseInt(prompt("Enter the number of dice:"));
+    let targetSum = parseInt(prompt("Enter the target sum:"));
+
+    let numberOfSimulations = 10000;
+    let successfulOutcomes = 0;
+
+    for (let i = 0; i < numberOfSimulations; i++) {
+        let sum = 0;
+
+        for (let j = 0; j < diceNumber; j++) {
+            sum += Math.floor(Math.random() * 6) + 1;
+        }
+
+        if (sum === targetSum) {
+            successfulOutcomes++;
+        }
+    }
+
+    let probability = (successfulOutcomes / numberOfSimulations) * 100;
+
+    document.getElementById("result").innerHTML = "Probability to get sum " + targetSum + " with " + diceNumber + " dice is " + probability.toFixed(2) + "%";
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Tehtävä 2</h1>
+<script>
+    const participants = parseInt(prompt("Enter the number of participants here: "));
+
+    if (isNaN(participants) || participants <= 0) {
+        alert("Please enter a valid positive number for the participants.");
+    } else {
+        const names = [];
+
+        for (let i = 0; i < participants; i++) {
+            const name = prompt(`Names of the participant ${i + 1}: `);
+            names.push(name);
+        }
+
+        names.sort();
+
+        document.write("<h2>List of Participants</h2>");
+        document.write("<ol>");
+
+        for (const name of names) {
+            document.write(`<li>${name}</li>`);
+        }
+
+        document.write("</ol>");
+    }
+
+</script>
+</body>
+</html>

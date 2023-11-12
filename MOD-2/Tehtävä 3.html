@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 3</h1>
+<script>
+
+    const dogs = [];
+
+    for (let i = 0; i < 6; i++) {
+        const name = prompt(`Type name of the dogs here ${i + 1}: `);
+        dogs.push(name);
+    }
+
+    dogs.sort((a,b) => b.localeCompare(a));
+
+    document.write("<h2>List of Dog Names (Reverse Alphabetical Order)</h2>");
+    document.write("<ul>");
+
+    for (const dog of dogs) {
+      document.write(`<li>${dog}</li>`);
+    }
+
+    document.write("</ul>");
+
+</script>
+</body>
+</html>

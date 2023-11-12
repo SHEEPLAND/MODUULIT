@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 8</h1>
+<h1>Leap Years</h1>
+<p id="target"></p>
+
+<script>
+    "use strict";
+    const print = document.querySelector("#target");
+
+    let startYear = +prompt('Enter start year: ');
+    let endYear = +prompt('Enter end year: ');
+
+    print.innerHTML = `Leap years from ${startYear} to ${endYear}:
+       <ul>`;
+
+    for (let year = startYear; year <= endYear; year++) {
+        if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+            print.innerHTML += `<li>${year}</li>`;
+        }
+    }
+
+    print.innerHTML += `</ul>`;
+</script>
+</body>
+</html>

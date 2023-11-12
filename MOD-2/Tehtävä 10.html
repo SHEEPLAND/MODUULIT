@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function results(candidates) {
+        candidates.sort((a, b) => b.votes - a.votes);
+
+        console.log(`The winner is ${candidates[0].name} with ${candidates[0].votes} votes.`);
+
+        console.log("Results:");
+        for (const candidate of candidates) {
+            console.log(`${candidate.name}: ${candidate.votes} votes`);
+        }
+    }
+
+    function castVotes(voters, candidates) {
+        for (let i = 0; i < voters; i++) {
+            const vote = prompt(`Enter the name of the candidate you want to vote for (or press Enter for an empty vote):`);
+
+            const selectedCandidate = candidates.find(candidate => candidate.name === vote);
+
+            if (selectedCandidate) {
+                selectedCandidate.votes++;
+            } else if (vote.trim() !== "") {
+                console.log("Invalid candidate. Vote not counted.");
+            }
+        }
+    }
+
+    function votingProgram() {
+        const candidates = [];
+
+        const numCandidates = parseInt(prompt("Enter the number of candidates:"));
+
+        for (let i = 1; i <= numCandidates; i++) {
+            const candidateName = prompt(`Name for candidate ${i}:`);
+            candidates.push({name: candidateName, votes: 0});
+        }
+
+        const numVoters = parseInt(prompt("Enter the number of voters:"));
+
+
+        castVotes(numVoters, candidates);
+
+        results(candidates);
+    }
+
+    votingProgram();
+
+
+</script>
+</body>
+</html>

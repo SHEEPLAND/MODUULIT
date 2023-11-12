@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h1>Tehtävä 3</h1>
+
+<script>
+    const integer1 = parseInt(prompt("Type the integer here: "));
+    const integer2 = parseInt(prompt("Type the integer here: "));
+    const integer3 = parseInt(prompt("Type the integer here: "));
+
+    const sum = integer1 + integer2 + integer3
+    const product = integer1 * integer2 * integer3
+    const average = sum / 3;
+
+    document.body.innerHTML = `
+
+        <h2>Sum: ${sum}</h2>
+        <h2>Product: ${product}</h2>
+        <h2>Average: ${average}</h2>
+    `;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tehtävä 1</h1>
+<script>
+    const numbers = [];
+
+    for (let i = 0; i < 5; i++) {
+        const number = prompt(`Type five numbers here ${i + 1}: `);
+        numbers.push(number);
+    }
+
+    console.log("List of numbers in reverse order: ");
+
+    for (let i = numbers.length - 1; i >= 0; i--) {
+        console.log(numbers[i]);
+    }
+
+
+</script>
+
+</body>
+</html>
